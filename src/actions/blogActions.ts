@@ -51,7 +51,7 @@ export async function getPost(id: string): Promise<BlogPost | null> {
     console.log(`✅ Fetched post: ${post.title}`);
 
     return {
-      id: post.id,
+      id: String(post.id),
       title: post.title,
       content: post.content,
       author: post.author,
