@@ -40,27 +40,6 @@ Key Features:
 
 ---
 
-## Folder Structure
-frontend/
-├── src/
-│ ├── app/ # Next.js App directory with pages and components
-│ │ ├── components/ # React components (forms, cards, lists)
-│ │ ├── globals.css # Global Tailwind CSS styles
-│ │ ├── layout.tsx # Root layout for Next.js App Router
-│ │ └── page.tsx # Home page (blog post listing)
-│ ├── actions/ # Server Actions for CRUD operations
-│ ├── payload/ # Payload CMS configuration files
-│ ├── lib/ # Utility or mock data files
-├── .env.example # Example environment variables template
-├── .gitignore # Files/directories ignored by Git
-├── next.config.ts # Next.js configuration file
-├── tailwind.config.ts # Tailwind CSS configuration file
-├── package.json # Node.js dependencies and scripts
-├── tsconfig.json # TypeScript configuration
-└── README.md # Project documentation (this file)
-
----
-
 ## Prerequisites
 - Node.js v18.17+ installed
 - npm (Node Package Manager)
@@ -131,12 +110,6 @@ This project is production-ready. Suggested steps:
 3. Commit your changes (`git commit -am "Add new feature"`)
 4. Push to branch (`git push origin feature/my-feature`)
 5. Open a Pull Request
-
----
-
-## License
-
-This project is licensed under the MIT License.
 
 ---
 
