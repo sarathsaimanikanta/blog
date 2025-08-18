@@ -26,7 +26,7 @@ export async function getPosts(): Promise<BlogPost[]> {
     console.log(`✅ Fetched ${posts.docs.length} posts from MongoDB Atlas`);
 
     return posts.docs.map(doc => ({
-      id: doc.id,
+      id: String(doc.id),
       title: doc.title,
       content: doc.content,
       author: doc.author,
