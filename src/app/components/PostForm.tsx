@@ -11,9 +11,14 @@ interface PostFormProps {
   onCancel?: () => void;
 }
 
+// ---- Add this type block ----
+type State =
+  | { error: string; success?: undefined }
+  | { success: string; error?: undefined };
+// ----------------------------
+
 function SubmitButton({ isEdit }: { isEdit: boolean }) {
   const { pending } = useFormStatus();
-  
   return (
     <button
       type="submit"
@@ -38,7 +43,11 @@ function SubmitButton({ isEdit }: { isEdit: boolean }) {
 export default function PostForm({ post, onCancel }: PostFormProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const action = post ? updatePost : createPost;
-  const [state, formAction] = useFormState(action, { error: '', success: '' });
+
+  // ---- Update these lines ----
+  const initialState: State = { error: "" };
+  const [state, formAction] = useFormState<State, FormData>(action, initialState);
+  // ---------------------------
 
   // Reset form on success
   useEffect(() => {
