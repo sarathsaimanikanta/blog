@@ -8,7 +8,7 @@ export default buildConfig({
     user: 'users',
     meta: {
       titleSuffix: '- Blog Manager',
-      favicon: '/favicon.ico',
+      //favicon: '/favicon.ico',
     },
   },
   collections: [
